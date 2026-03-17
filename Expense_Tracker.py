@@ -78,7 +78,8 @@ def monthly_report():
     month=int(input("Enter month: "))
     year=int(input("Enter year: "))
 
-    pattern = f"{year}-{month:02d}-%"
+    pattern = f"%-{month:02d}-{year}"
+
 
     c.execute("SELECT * FROM  EXPENSETRACKER WHERE DATE LIKE ? ", (pattern,)   )
 
